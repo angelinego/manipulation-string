@@ -20,6 +20,13 @@ console.log(sentenceA.toLowerCase())
 console.log(sentenceB.toLowerCase())
 console.log("--------------------------------------------------------------------------");
 
-console.log("LEVEL3")
-var sentenceE = "hello goodness" // "Hello Goodness"
-console.log(sentenceD.toTitleCase())
+console.log("LEVEL 3")
+var str = "hello goodness" // "Hello Goodness"
+
+function toTitleCase(str) {
+  return str.replace(/\w\S*/g, function(txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
+}
+
+console.log(toTitleCase(str));
